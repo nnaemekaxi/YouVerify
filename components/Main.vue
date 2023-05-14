@@ -1,13 +1,13 @@
 <template>
-    <div class="w-[84%] mt-10 flex flex-row">
-        <section class="bg-[#FEFEFE] w-[30%]">
+    <div class="w-[84%] mt-10 flex flex-row bg-[url('./assets/images/bgi.png')] bg-cover bg-center bg-no-repeat laptop:w-[90%] tablet:flex-col">
+        <section class="bg-[#FEFEFE] w-[30%] big-tablet:w-[49%] tablet:w-[100%]">
             <div class="w-[100%] h-11 bg-[#46B2C8;] px-4 flex items-center">
                 <h1 class="text-white font-semibold text-base">Task</h1>
             </div>
             <div class="w-[100%] h-12 flex flex-row items-center justify-between">
                 <h1 class="text-[#023A59] font-medium text-sm border-b border-[#023A59] w-[34%] pl-2 ">24 Unassigned</h1>
-                <h1 class="text-[#C4C4C4] font-medium text-sm border-b border-[#C4C4C4] w-[33%]">12 Assigned</h1>
-                <h1 class="text-[#C4C4C4] font-medium text-sm border-b border-[#C4C4C4] w-[33%] pr-2 ">30 Completed</h1>
+                <h1 class="text-[#C4C4C4] font-medium text-sm border-b border-[#C4C4C4] w-[32%]">12 Assigned</h1>
+                <h1 class="text-[#C4C4C4] font-medium text-sm border-b border-[#C4C4C4] w-[34%] pr-2 ">30 Completed</h1>
             </div>
             <ul class="flex flex-col gap-5">
                 <li class="flex flex-row items-center px-4 gap-8">
@@ -137,10 +137,9 @@
                 </li>
             </ul>
         </section>
-        <section class="w-[40%]">
-            <img src="../assets/images/bgi.png" alt="bgi" class="w-[100%] h-[100%]">
+        <section class="w-[40%] big-tablet:w-[2%] tablet:hidden">
         </section>
-        <section class="bg-[#FEFEFE] w-[30%]">
+        <section class="bg-[#FEFEFE] w-[30%] big-tablet:w-[49%] tablet:w-[100%]" >
             <div class="w-[100%] h-11 bg-[#46B2C8;]  px-2 flex items-center">
                 <h1 class="text-white font-semibold text-base">Agents</h1>
             </div>

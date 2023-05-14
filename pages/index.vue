@@ -2,7 +2,7 @@
     <div>
         <Header />
       <section class="bg-white flex flex-row">
-        <SideBar />
+        <SideBar/>
         <Main />
       </section>
     </div>
