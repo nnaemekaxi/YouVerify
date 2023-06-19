@@ -16,3 +16,12 @@
         </section>
     </div>
 </template>
+
+<script>
+
+export default{
+    name:"Header",
+    props:["header"]
+}
+
+</script>

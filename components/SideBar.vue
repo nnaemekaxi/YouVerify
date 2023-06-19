@@ -6,13 +6,35 @@
         </section>
         <section class="laptop:mt-10">
             <ul class="w-[100%] flex flex-col justify-center gap-6 mt-8 font-semibold text-lg leading-6">
-                <NuxtLink to="#"> <li class=" pl-6 flex items-center bg-[#46B2C8]  h-11 border-l-4 border-white" ><img src="../assets/images/dashboard.png" alt="settings" class="h-4 w-4 mr-2"><span  class="laptop:hidden"> Dashboard</span></li></NuxtLink>
-                <NuxtLink to="#"> <li class=" pl-6 flex text-[#C2E2E9] items-center h-11"><img src="../assets/images/agents.png" alt="settings" class="h-4 w-4 mr-2"><span class="laptop:hidden"> Agents</span></li></NuxtLink>
-                <NuxtLink to="#"> <li class=" pl-6 flex text-[#C2E2E9] items-center h-11"> <img src="../assets/images/task.png" alt="settings" class="h-4 w-4 mr-2"><span  class="laptop:hidden"> Task</span></li></NuxtLink>
-                <NuxtLink to="#"> <li class=" pl-6 flex text-[#C2E2E9] items-center h-11"><img src="../assets/images/teams.png" alt="settings" class="h-4 w-4 mr-2"><span  class="laptop:hidden"> Teams</span></li></NuxtLink>
-                <NuxtLink to="#"> <li class=" pl-6 flex text-[#C2E2E9] items-center h-11"><img src="../assets/images/users.png" alt="settings" class="h-4 w-4 mr-2"><span  class="laptop:hidden">Users</span></li></NuxtLink>
-                <NuxtLink to="#"> <li class=" pl-6 flex text-[#C2E2E9] items-center h-11"> <img src="../assets/images/Setting.png" alt="settings" class="h-4 w-4 mr-2"> <span class="laptop:hidden">Settings</span> </li></NuxtLink>
+                <li  v-for="(link, index) in links"><NuxtLink :to="link.url" :key="index" class="pl-6 flex items-center  h-11" :class="{'bg-[#46B2C8]': activePage == index}" @click.prevent="activePage = index"> <img :src="link.image" :alt="link.alt" class="h-4 w-4 mr-2"><span> {{ link.text }}</span></NuxtLink></li>
+                
             </ul>
         </section>
     </div>
 </template>
+
+<script>
+        import dashboard from '~/assets/images/dashboard.png';
+        import agents from '~/assets/images/agents.png';
+        import task from '~/assets/images/task.png';
+        import teams from '~/assets/images/teams.png';
+        import users from '~/assets/images/users.png';
+        import settings from '~/assets/images/settings.png';
+
+    export default{
+        name: 'NuxtSideBar',
+        data(){
+            return{
+                activePage:0,
+                links: [ 
+                    {text: "Dashboard", url: "#", image: dashboard, alt: "dashboard"},
+                    {text: "Agents", url: "#", image: agents, alt: "agents"},
+                    {text: "Task", url: "#", image: task, alt: "task"},
+                    {text: "Teams", url: "#", image: teams, alt: "teams"},
+                    {text: "Users", url: "#", image: users, alt: "users"},
+                    {text: "Settings", url: "#", image: settings, alt: "settings"}
+                ]
+            }
+        }
+    }
+</script>
